@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu de Pierre-Feuille-Ciseaux</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Jeu de Pierre-Feuille-Ciseaux</h1>
+  <div id="game-container">
+    <div id="choices-container">
+      <button class="choice-button" id="pierre">Pierre</button>
+      <button class="choice-button" id="feuille">Feuille</button>
+      <button class="choice-button" id="ciseaux">Ciseaux</button>
+    </div>
+    <div id="result-container"></div>
+    <div id="score-container">
+      <div>
+        <span class="score-label">Joueur:</span>
+        <span id="score-joueur" class="score-value">0</span>
+      </div>
+      <div>
+        <span class="score-label">Ordinateur:</span>
+        <span id="score-ordinateur" class="score-value">0</span>
+      </div>
+    </div>
+    <button id="reset-button">Réinitialiser</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
