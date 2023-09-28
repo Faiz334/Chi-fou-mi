@@ -2,14 +2,14 @@ let manchesJoueur = 0;
 let manchesOrdinateur = 0;
 let choixJoueur = "";
 
-// Fonction pour générer le choix de l'ordinateur
+// le choix aléatoire de l'ordinateur
 function genererChoixOrdinateur() {
   const choix = ["pierre", "feuille", "ciseaux"];
   const choixAleatoire = Math.floor(Math.random() * 3);
   return choix[choixAleatoire];
 }
 
-// Fonction pour déterminer le gagnant de chaque manche
+// le gagnant de chaque manche
 function determinerGagnant(choixOrdinateur) {
   if (choixJoueur === choixOrdinateur) {
     return "Égalité !";
@@ -26,13 +26,13 @@ function determinerGagnant(choixOrdinateur) {
   }
 }
 
-// Fonction pour mettre à jour l'affichage des manches
+// l'affichage des manches
 function afficherManches() {
   document.getElementById("score-joueur").textContent = manchesJoueur;
   document.getElementById("score-ordinateur").textContent = manchesOrdinateur;
 }
 
-// Fonction pour afficher le résultat
+// le résultat
 function afficherResultat(resultat) {
   document.getElementById("result-container").textContent = resultat;
 }
@@ -43,8 +43,9 @@ function choixJoueurClick(e) {
   const choixOrdinateur = genererChoixOrdinateur();
   const resultat = determinerGagnant(choixOrdinateur);
   afficherResultat(resultat);
-  afficherManches();
+  afficherManches(); 
 
+  // annonce du vainqueur
   if (manchesJoueur + manchesOrdinateur === 5) {
     const gagnant = (manchesJoueur > manchesOrdinateur) ? "Vous avez gagné la partie !" : "L'ordinateur a gagné la partie !";
     alert(`Partie terminée.\n\nManches gagnées par vous : ${manchesJoueur}\nManches gagnées par l'ordinateur : ${manchesOrdinateur}\n\n${gagnant}`);

@@ -1,16 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Press Start 2P', cursive !important;
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
 h1 {
+  font-family: 'Arial', sans-serif;
   color: #333;
 }
 
+h2{
+  font-size: 100px;
+}
+
 #game-container {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 #choices-container {
@@ -20,7 +27,6 @@ h1 {
 }
 
 .choice-button {
-  font-size: 16px;
   padding: 10px 20px;
   margin: 0 10px;
 }
@@ -33,4 +39,13 @@ h1 {
 #reset-button {
   font-size: 16px;
   padding: 10px 20px;
+}
+
+.container{
+  background-color: #e8e8e8;
+  border-radius: 15px;
+}
+
+.score-value{
+  font-size: 70px
 }
