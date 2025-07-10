@@ -43,7 +43,7 @@ function choixJoueurClick(e) {
   const choixOrdinateur = genererChoixOrdinateur();
   const resultat = determinerGagnant(choixOrdinateur);
   afficherResultat(resultat);
-  afficherManches(); 
+  afficherManches();
 
   // annonce du vainqueur
   if (manchesJoueur + manchesOrdinateur === 5) {
